@@ -33,6 +33,7 @@
 
 body {
     font-family: var(--font-type-main);
+    color: var(--font-color-primary);
 }
 
 .d_flex {
@@ -49,6 +50,14 @@ body {
 
 .align_center {
     align-items: center;
+}
+
+.gap_x_small {
+    column-gap: 0.5rem;
+}
+
+.gap_x_mid {
+    column-gap: 1rem;
 }
 
 .clearfix_rule::after {
@@ -81,6 +90,14 @@ body {
 
 .font_size_large {
     font-size: var(--font-size-large);
+}
+
+.font_color_primary {
+    color: var(--font-color-primary);
+}
+
+.font_color_mid {
+    color: var(--font-color-mid);
 }
 
 .btn {
@@ -126,6 +143,10 @@ body {
 
 .mr_2 {
     margin-right: 2rem;
+}
+
+.pr_2 {
+    padding-right: 2rem;
 }
 
 
@@ -188,6 +209,14 @@ body {
 
     background-color: var(--bg-color-footer);
 
+    justify-content: space-between;
+}
+
+#site_footer img {
+    height: calc(var(--footer-height-1) / 2)
+}
+
+#site_footer .song_actions {
     justify-content: space-between;
 }
 
