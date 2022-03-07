@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --bg-color-sidebar: #000000;
     --bg-color-header: #080B12;
@@ -14,6 +20,148 @@
     --font-size-small: 0.8rem;
     --font-size-mid: 1.2rem;
     --font-size-large: 1.5rem;
+
+    --sidebar-width-1: 250px;
+    --sidebar-width-2: 200px;
+
+    --header-height-1: 70px;
+
+    --footer-height-1: 90px;
+}
+
+/* #region UTILITY */
+
+.d_flex {
+    display: flex;
+}
+
+.dir_column {
+    flex-direction: column;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.clearfix_rule::after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.float_left {
+    float: left;
+}
+
+.list_style_none {
+    list-style: none;
+}
+
+.style_none {
+    text-decoration: none;
+    color: inherit;
+}
+
+.font_size_small {
+    font-size: var(--font-size-small);
+}
+
+.font_size_mid {
+    font-size: var(--font-size-mid);
+}
+
+.font_size_large {
+    font-size: var(--font-size-large);
 }
 
 
+/* .btn {
+    padding: 0.3rem 1rem;
+    display: inline-block;
+}
+
+.btn-1 {
+    background-color: var(--btn-theme);
+    color: var(--light);
+}
+
+.btn-2 {
+    background-color: var(--light);
+    color: var(--dark);
+    border: 1px solid var(--dark);
+}
+
+.btn-3 {
+    background-color: var(--light);
+    color: var(--dark);
+    width: 100%;
+    text-align: center;
+} */
+
+
+
+
+/* #endregion UTILITY */
+
+
+
+/* #region SIDEBAR */
+
+#site_navigation_sidebar {
+    width: var(--sidebar-width-1);
+    height: calc(100vh - var(--footer-height-1));
+
+    background-color: var(--bg-color-sidebar);
+}
+
+
+/* #endregion SIDEBAR */
+
+
+
+/* #region HEADER */
+
+#site_header {
+    width: calc(100vw - var(--sidebar-width-1));
+    height: var(--header-height-1);
+
+    background-color: var(--bg-color-header);
+
+}
+
+/* #endregion HEADER */
+
+
+
+/* #region MAIN */
+
+#site_main {
+    width: calc(100vw - var(--sidebar-width-1));
+    height: calc(100vh - var(--footer-height-1) - var(--header-height-1));
+
+    background-color: var(--bg-color-main);
+
+}
+
+/* #endregion MAIN */
+
+
+/* #region FOOTER */
+
+#site_footer {
+    width: 100vw;
+    height: var(--footer-height-1);
+
+    background-color: var(--bg-color-footer);
+}
+
+/* #endregion FOOTER */
+
+
+
+/* MEDIA QUERY */
