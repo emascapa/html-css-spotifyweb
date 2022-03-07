@@ -27,7 +27,7 @@
     
         <!-- Header section here -->
         <header id="site_header" class="float_left d_flex">
-            <a href="#" class="btn style_none mr_2 text_uppercase font_size_small">
+            <a href="#" class="btn style_none mr_2 text_uppercase font_size_small hover_enlarge">
                 Effettua l'upgrade
             </a>
         </header>
@@ -45,12 +45,12 @@
                     <img src="./img/sinister.jpeg" alt="in play">
                     <div class="song_artist_playing d_flex dir_column">
                         <h5>Sinister</h5>
-                        <span class="font_size_smaller font_color_mid">Artista</span>
+                        <a href="#" class="style_none font_size_smaller font_color_mid hover_white hover_underline">Artista</a>
                     </div>           
                 </div>
                 <div class="song_actions d_flex gap_x_mid">
-                    <a href="#" class="style_none font_color_mid"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#" class="style_none font_color_mid"><i class="fa-regular fa-folder"></i></a>
+                    <a href="#" class="style_none font_color_mid hover_white"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#" class="style_none font_color_mid hover_white"><i class="fa-regular fa-folder"></i></a>
                 </div>
 
             </div>
@@ -59,7 +59,7 @@
                 <div class="playing_actions d_flex gap_x_mid align_center">
                     <a href="#" class="style_none"><i class="fa-solid fa-shuffle"></i></a>
                     <a href="" class="style_none"><i class="fa-solid fa-backward-step"></i></a>
-                    <a href="" class="style_none font_size_large mx_dot5"><i class="fa-regular fa-circle-play"></i></a>
+                    <a href="" class="style_none font_size_large mx_dot5 hover_enlarge"><i class="fa-regular fa-circle-play"></i></a>
                     <a href="" class="style_none"><i class="fa-solid fa-forward-step"></i></a>
                     <a href="" class="style_none"><i class="fa-solid fa-rotate-right"></i></a>
                 </div>
@@ -68,8 +68,8 @@
                         <span class="font_size_smaller">0:36</span>
                     </div>
                     <div class="bar_song">
-                        <div class="bar_played">
-
+                        <div class="bar_active d_flex">
+                            <div class="set_level"></div>
                         </div>
                     </div>
                     <div class="duration_song">
@@ -77,7 +77,19 @@
                     </div>
                 </div>
             </div>
-            <div class="footer_right">Right</div>
+            <!-- RIGHT SECTION FOOTER -->
+            <div class="footer_right d_flex align_center gap_x_mid">
+                <a href="" class="style_none"><i class="fa-solid fa-list-ul"></i></a>
+                <a href="" class="style_none"><i class="fa-solid fa-desktop"></i></a>
+                <div class="volume d_flex align_center gap_x_mid">
+                    <a href="" class="style_none"><i class="fa-solid fa-volume-high"></i></a> 
+                    <div class="bar_volume">
+                        <div class="bar_active d_flex">
+                            <div class="set_level"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
     
