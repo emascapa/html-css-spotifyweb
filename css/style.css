@@ -47,8 +47,17 @@ img {
     display: inline-block;
 }
 
+.row {
+    /* width: 100%; */
+    margin: 1rem 0;
+}
+
 .d_flex {
     display: flex;
+}
+
+.flex_wrap {
+    flex-wrap: wrap;
 }
 
 .dir_column {
@@ -61,6 +70,14 @@ img {
 
 .align_center {
     align-items: center;
+}
+
+.gap_y_small {
+    row-gap: 0.5rem;
+}
+
+.gap_y_mid {
+    row-gap: 1rem;
 }
 
 .gap_x_small {
@@ -93,6 +110,10 @@ img {
 .style_none {
     text-decoration: none;
     color: inherit;
+}
+
+.line_height_smaller {
+    line-height: var(--font-size-smaller);
 }
 
 .font_size_smaller {
@@ -177,8 +198,16 @@ img {
     margin: 0 0.5rem;
 }
 
+.my_dot5 {
+    margin: 0.5rem 0;
+}
+
 .mt_dot5 {
     margin-top: 0.5rem;
+}
+
+.mb_dot5 {
+    margin-bottom: 0.5rem;
 }
 
 .mr_1 {
@@ -189,12 +218,12 @@ img {
     margin-right: 2rem;
 }
 
-.mb_dot5 {
-    margin-bottom: 0.5rem;
-}
-
 .width_100 {
     width: 100%;
+}
+
+.height_100 {
+    height: 100%;
 }
 
 .hover_white:hover {
@@ -207,6 +236,10 @@ img {
 
 .hover_enlarge:hover {
     transform: scale(1.1);
+}
+
+.text_center {
+    text-align: center;
 }
 
 
@@ -276,7 +309,7 @@ img {
 }
 
 .playlist_list {
-    height: calc(100vh - (var(--footer-height-1) + 280px + 100px));
+    height: calc(100vh - (var(--footer-height-1) + 280px + 100px)); /*rule for scrollbar: 280px + 100px is the sum of heights of elements in the sidebar*/
 }
 
 .padd_sidebar {
@@ -295,8 +328,8 @@ img {
 
 .nav_item,
 .playlist_list a {
-    height: 30px;
-    line-height: 30px;
+    height: 35px;
+    line-height: 35px;
 }
 
 .chosen_bar {
@@ -304,13 +337,13 @@ img {
     height: 100%;
 }
 
-.chosen_bar.bg_marked {
+.nav_item:hover .chosen_bar {
     background-color: var(--color-choice);
 }
 
-.navbar .marked {
+/* .navbar .marked {
     color: var(--font-color-primary);
-}
+} */  /*ELIMINAMI FORSEEEE*/
 
 .padding_playlist {
     padding: 0 20px;
@@ -338,6 +371,10 @@ img {
     overflow: hidden;
     
 }
+
+/* .fill_gray {
+    fill: #9AE32E;
+} */
 
 
 
@@ -372,7 +409,60 @@ img {
 
     background-color: var(--bg-color-main);
 
+    overflow-y: auto;
+
 }
+
+
+.green_line {
+    width: 30px;
+    border-bottom: 3px solid var(--bg-color-main);
+}
+
+.navbar_main>ul>li:hover .green_line {
+    border-color: var(--color-choice);
+
+}
+
+/* .sections_wrapper {
+    overflow-y: auto;
+} */
+
+/* .sections_wrapper .row {
+    height: 250px;
+} */
+
+.card {
+    width: 150px;
+}
+
+.card_cover {
+    position: relative;
+    /* height: 70%; */
+}
+/* .card_cover>img {
+    max-height: 100%;
+} */
+
+.hover_cover {
+    position: absolute;
+    /* display: none; */
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.6);
+}
+
+.card:hover .hover_cover {
+    z-index: 1;
+}
+
+.popular_artist a.card_cover {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
 
 /* #endregion MAIN */
 
