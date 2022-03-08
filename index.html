@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="./css/style.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -25,7 +27,8 @@
         <!-- Navigation SIDEBAR here -->
         <section id="site_navigation_sidebar" class="float_left clearfix_rule">
             <div class="site_logo padd_sidebar float_left width_100">
-                <img src="./img/logo.svg" alt="">
+                <img src="./img/logo.svg" alt="" class="big_logo">
+                <img src="./img/logo-small.svg" alt="" class="small_logo">
             </div>
             <nav class="navbar float_left width_100">
 
@@ -137,14 +140,14 @@
             <div class="bottom_content padd_sidebar d_flex dir_column justify_center float_left width_100">
                 <a href="#" class="style_none font_color_mid font_size_small mb_dot5"> <!-- mb_dot5 -->
                     <i class="fa-regular fa-circle-down"></i>
-                    <span>Installa app</span> 
+                    <span class="logo_caption">Installa app</span> 
                 </a>
                 <div class="separator_line width_100"></div>
                 <div class="user d_flex align_center gap_x_small mt_dot5">
                     <div class="avatar">
                         <img src="./img/profile.svg" alt="profilepic">
                     </div>
-                    <a href="#" class="style_none font_size_small"><strong>Pippo Baudo</strong></a>
+                    <a href="#" class="style_none font_size_small logo_caption"><strong>John Doe</strong></a>
                 </div>
             </div>
 
@@ -160,7 +163,7 @@
     
         <!-- MAIN section here -->
         <main id="site_main" class="float_left px_1">
-            <!-- Top navbar here -->
+            <!-- Top main_navbar here -->
             <nav class="navbar_main my_dot5">
                 <ul class="list_style_none d_flex flex_wrap width_100 justify_center gap_x_mid font_size_small">
                     <li class="d_flex dir_column align_center">
@@ -189,7 +192,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="sections_wrapper">
+            <!-- This div will contain the sections of the main -->
+            <div class="sections_wrapper my_dot5">
                 <section class="recently_played mt_dot5">
                     <h3>Recently Played</h3>
                     <div class="row d_flex flex_wrap gap_x_mid gap_y_small">
@@ -202,7 +206,9 @@
                             </a>
                             <div class="card_info d_flex dir_column align_center">
                                 <a href="#" class="style_none text_center"><h5>Heavy Metal</h5></a>
-                                <a href="#" class="style_none text_center line_height_smaller"><span class="font_color_mid font_size_small">Subtle</span></a>
+                                <a href="#" class="style_none text_center line_height_smaller">
+                                    <span class="font_color_mid font_size_smaller">Subtle</span>
+                                </a>
                             </div>
                         </div>
                         <div class="card d_flex dir_column align_center height_100 my_dot5">
@@ -231,7 +237,7 @@
                             <div class="card_info d_flex dir_column align_center">
                                 <a href="#" class="style_none text_center"><h5>A Quiet Place</h5></a>
                                 <a href="#" class="style_none text_center line_height_smaller">
-                                    <span class="font_color_mid font_size_small">Subtle</span>
+                                    <span class="font_color_mid font_size_smaller">Subtle</span>
                                 </a>
                             </div>
                         </div>
@@ -259,7 +265,7 @@
                             <div class="card_info d_flex dir_column align_center">
                                 <a href="#" class="style_none text_center"><h5>A cure for wellness</h5></a>
                                 <a href="#" class="style_none text_center line_height_smaller">
-                                    <span class="font_color_mid font_size_small">Subtle</span>
+                                    <span class="font_color_mid font_size_smaller">Subtle</span>
                                 </a>
                             </div>
                         </div>
@@ -323,7 +329,7 @@
                             </div>
                         </div>
                         <div class="card d_flex dir_column align_center height_100 my_dot5">
-                            <a href="#" class="card_cover style_none">
+                            <a href="#" class="card_cover style_none width_100">
                                 <img src="./img/einaudi.jpeg" alt="">
                                 <div class="hover_cover width_100 height_100 d_flex align_center justify_center">
                                     <i class="fa-regular fa-circle-play font_size_larger"></i>
@@ -381,11 +387,13 @@
                 </div>
             </div>
             <!-- RIGHT SECTION FOOTER -->
-            <div class="footer_right d_flex align_center gap_x_mid">
-                <a href="" class="style_none"><i class="fa-solid fa-list-ul"></i></a>
-                <a href="" class="style_none"><i class="fa-solid fa-desktop"></i></a>
-                <div class="volume d_flex align_center gap_x_mid">
+            <div class="footer_right d_flex flex_wrap justify_center gap_x_mid gap_y_small">
+                <!-- <div class="actions d_flex align_center gap_x_mid"> -->
+                    <a href="" class="style_none"><i class="fa-solid fa-list-ul"></i></a>
+                    <a href="" class="style_none"><i class="fa-solid fa-desktop"></i></a>
                     <a href="" class="style_none"><i class="fa-solid fa-volume-high"></i></a> 
+                <!-- </div> -->
+                <div class="volume d_flex align_center gap_x_mid">
                     <div class="bar_volume">
                         <div class="bar_active d_flex">
                             <div class="set_level"></div>
