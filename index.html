@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/ac7715c080.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ac7715c080.js" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -21,11 +23,11 @@
     <div id="site_wrapper" class="clearfix_rule">
 
         <!-- Navigation SIDEBAR here -->
-        <section id="site_navigation_sidebar" class="float_left">
-            <div class="site_logo padd_sidebar">
+        <section id="site_navigation_sidebar" class="float_left clearfix_rule">
+            <div class="site_logo padd_sidebar float_left width_100">
                 <img src="./img/logo.svg" alt="">
             </div>
-            <nav class="navbar">
+            <nav class="navbar float_left width_100">
 
                 <div class="nav_item d_flex align_center">
                     <div class="chosen_bar bg_marked mr_1">
@@ -33,7 +35,8 @@
                     </div>
                     <a href="#" class="style_none marked hover_white d_flex align_center gap_x_small">
                         <div class="icon_container d_flex align_center justify_center">
-                            <i class="fa-solid fa-home font_size_mid"></i>
+                            <!-- <i class="fa-solid fa-home font_size_mid"></i> -->
+                            <img src="./img/home.svg" alt="">
                         </div>
                         <span class="font_size_small logo_caption">Home</span>
                     </a>
@@ -44,7 +47,8 @@
                     </div>
                     <a href="#" class="style_none font_color_mid hover_white d_flex align_center gap_x_small">
                         <div class="icon_container d_flex align_center justify_center">
-                            <i class="fa-solid fa-magnifying-glass font_size_mid"></i>
+                            <!-- <i class="fa-solid fa-magnifying-glass font_size_mid"></i> -->
+                            <img src="./img/search.svg" alt="">
                         </div>
                         <span class="font_size_small logo_caption">Cerca</span>
                     </a>
@@ -55,9 +59,10 @@
                     </div>
                     <a href="#" class="style_none font_color_mid hover_white d_flex align_center gap_x_small">
                         <div class="icon_container d_flex align_center justify_center">
-                            <i class="fa-solid fa-democrat font_size_mid"></i>
+                            <!-- <i class="fa-solid fa-democrat font_size_mid"></i> -->
+                            <img src="./img/libreria.svg" alt="">
                         </div>
-                        <span class="font_size_small logo_caption">Ciuchino</span>
+                        <span class="font_size_small logo_caption">Playlist</span>
                     </a>
                 </div>
 
@@ -92,15 +97,18 @@
                 </ul> -->
 
             </nav>
-            <div class="playlist padd_sidebar">
-                <h4 class="text_uppercase mb_dot5">Playlist</h4>
-                <a href="#" class="style_none font_color_mid hover_white d_flex align_center gap_x_small mb_dot5">
-                    <div class="d_flex align_center justify_center">
-                        <i class="fa-solid fa-square-plus font_size_larger"></i>
-                    </div>
-                    <span class="font_size_medium logo_caption">Crea Playlist</span>
-                </a>
-                <div class="playlist_list">
+            <div class="playlist float_left width_100"> <!--padd_sidebar -->
+                <div class="playlist_div d_flex dir_column justify_center padding_playlist ">
+                    <h4 class="text_uppercase mb_dot5">Playlist</h4>
+                    <a href="#" class="style_none font_color_mid hover_white d_flex align_center gap_x_small mb_dot5">
+                        <div class="d_flex align_center justify_center">
+                            <i class="fa-solid fa-square-plus font_size_larger"></i>
+                        </div>
+                        <span class="font_size_medium logo_caption">Crea Playlist</span>
+                    </a>
+                </div>
+
+                <div class="playlist_list padding_playlist ">
                     <ul class="list_style_none">
                         <li>
                             <a href="#" class="style_none font_color_mid font_size_small hover_white">Nome playlist</a>
@@ -127,13 +135,13 @@
                 </div>
             </div>
 
-            <div class="bottom_content padd_sidebar d_flex dir_column">
-                <a href="#" class="style_none font_color_mid font_size_small "> <!-- mb_dot5 -->
-                    <i class="fa-regular fa-circle-arrow-down mr_1"></i>
-                    Installa app
+            <div class="bottom_content padd_sidebar d_flex dir_column justify_center float_left width_100">
+                <a href="#" class="style_none font_color_mid font_size_small mb_dot5"> <!-- mb_dot5 -->
+                    <i class="fa-regular fa-circle-down"></i>
+                    <span>Installa app</span> 
                 </a>
                 <div class="separator_line width_100"></div>
-                <div class="user d_flex align_center">
+                <div class="user d_flex align_center gap_x_small mt_dot5">
                     <div class="avatar">
                         <img src="./img/profile.svg" alt="profilepic">
                     </div>
