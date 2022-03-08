@@ -26,7 +26,7 @@
 
     --sidebar-width-1: 250px;
     --sidebar-width-2: 180px;
-    --sidebar-width-3: 50px;
+    --sidebar-width-3: 40px;
 
     --header-height-1: 70px;
 
@@ -42,6 +42,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 .display_ib {
@@ -313,9 +314,9 @@ img {
     height: calc(100vh - (var(--footer-height-1) + 280px + 100px)); /*rule for scrollbar: 280px + 100px is the sum of heights of elements in the sidebar*/
 }
 
-.padd_sidebar {
+/* .padd_sidebar {
     padding: 20px;
-}
+} */
 
 .site_logo>.big_logo {
     height: 35px;
@@ -325,6 +326,11 @@ img {
 .site_logo>.small_logo {
     height: 25px;
     
+}
+
+.site_logo,
+.bottom_content {
+    padding: 20px;
 }
 
 .small_logo {
@@ -345,6 +351,13 @@ img {
 .chosen_bar {
     width: 4px;
     height: 100%;
+    margin-right: 1rem;
+}
+
+.bar_mobile {
+    width: 4px;
+    height: 100%;
+    display: none;
 }
 
 .nav_item:hover .chosen_bar {
@@ -444,6 +457,7 @@ img {
 
 .card {
     width: 150px;
+    row-gap: 0.5rem;
 }
 
 .card_cover {
@@ -628,13 +642,39 @@ img {
 
     #site_navigation_sidebar {
         width: var(--sidebar-width-3);
-        /* transition: all 0.5s; */
+
+        position: relative;
+    }
+    .site_logo,
+    .bottom_content {
+        padding: 0;
+    }
+
+    .site_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom_content {
+        align-items: center;
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
     .big_logo {
         display: none;
     }
     .small_logo {
         display: block;
+    }
+    .chosen_bar {
+        margin-right: 0;
+    }
+    .bar_mobile {
+        display: block;
+    }
+    .nav_item>a {
+        justify-content: center;
     }
     .logo_caption {
         display: none;
@@ -649,7 +689,7 @@ img {
 
     #site_header {
         width: calc(100% - var(--sidebar-width-3));
-        /* transition: all 0.5s; */
+        transition: all 0.5s;
     }
     #site_main {
         width: calc(100% - var(--sidebar-width-3));
