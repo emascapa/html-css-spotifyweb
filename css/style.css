@@ -728,6 +728,7 @@ img {
         width: var(--sidebar-width-3);
 
         position: relative;
+        overflow-y: hidden;
     }
     .site_logo,
     .bottom_content {
