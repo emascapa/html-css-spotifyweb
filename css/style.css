@@ -477,6 +477,7 @@ img {
 
 .card_cover {
     position: relative;
+    max-width: 300px;
     /* height: 70%; */
 }
 /* .card_cover>img {
@@ -493,11 +494,18 @@ img {
 }
 
 .card_info h5 {
-    width: 100%;
-    text-overflow: ellipsis;
-    line-height: 1.3rem;
-    max-height: 2.6rem;
-    overflow-y: hidden;  
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    /* nei titoli di album che sforano le due righr appariranno i puntini di sospensione*/
+}
+
+.card_info span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .card:hover .hover_cover {
