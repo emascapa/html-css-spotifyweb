@@ -192,6 +192,10 @@ img {
     padding: 0 1rem;
 }
 
+.py_dot5 {
+    padding: 0.5rem 0;
+}
+
 .pr_2 {
     padding-right: 2rem;
 }
@@ -202,6 +206,10 @@ img {
 
 .my_dot5 {
     margin: 0.5rem 0;
+}
+
+.my_1 {
+    margin: 1rem 0;
 }
 
 .mt_dot5 {
@@ -258,22 +266,22 @@ img {
 ::-webkit-scrollbar {
     width: 8px;
     border-radius: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+    
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+    
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+    
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555; 
-  }
+}
 
 
 /* #region SIDEBAR */
@@ -577,6 +585,22 @@ img {
 
 
 /* VERTICAL RESPONSIVE */
+
+@media screen and (max-height: 250px) {
+    #site_header {
+        display: none;
+        /* transition: all 1s; */
+    }
+    #site_main {
+        height: calc(100vh - var(--footer-height-1));
+        /* transition: all 1s; */
+    }
+
+
+
+}
+
+
 @media screen and (max-height: 160px) {
 
     #site_navigation_sidebar {
@@ -623,13 +647,29 @@ img {
       
     } */
     .footer_left {
-        flex-basis: 25%;
+        /* flex-basis: 25%; */
+    }
+    .footer_left img {
+        object-fit: contain;
+    }
+    .song_artist_playing {
+        display: none;
+    }
+    .song_actions {
+        display: none;
     }
     .footer_center {
-        flex-basis: 50%;
+        /* flex-basis: 50%; */
     }
     .footer_right {
-        flex-basis: 25%;
+        /* flex-basis: 25%; */
+    }
+    .footer_right_actions{
+        display: none;
+    }
+    .volume {
+        margin-left: 2rem;
+        flex-direction: column;
     }
 }
 
