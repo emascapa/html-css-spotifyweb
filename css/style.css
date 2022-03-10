@@ -14,6 +14,9 @@
     --color-choice: #9AE32E;
     --font-color-primary: #FFFFFF;
     --font-color-mid: #A3A3A3;
+    --color-card-bg: #1e232f;
+    --color-card-bg-hover: #2c313d;
+
 
     --font-type-main: 'Poppins', sans-serif;
 
@@ -251,6 +254,7 @@ img {
 
 .hover_enlarge:hover {
     transform: scale(1.1);
+    transition: all 0.2s;
 }
 
 .text_center {
@@ -460,19 +464,28 @@ img {
 
 }
 
-/* .sections_wrapper {
-    overflow-y: auto;
-} */
 
-/* .sections_wrapper .row {
-    height: 250px;
-} */
 
 .card {
-    /* width: 150px; */
     width: calc(100% / 6);
     padding: 0 0.5rem;
+    /* padding: 1rem 0.5rem;
     row-gap: 0.5rem;
+    background-color: lightgray;
+    border-radius: 15px; */
+}
+
+.card_bg {
+    padding: 1rem 1rem;
+    row-gap: 0.5rem;
+    background-color: var(--color-card-bg);
+    border-radius: 15px;
+}
+
+.card_bg:hover {
+    box-shadow: #888;
+    background-color: var(--color-card-bg-hover);
+    transition: all 0.3s;
 }
 
 .card_cover {
@@ -735,6 +748,7 @@ img {
         padding: 0;
     }
 
+
     .site_logo {
         display: flex;
         justify-content: center;
@@ -742,9 +756,6 @@ img {
     }
     .bottom_content {
         align-items: center;
-        position: absolute;
-        left: 0;
-        bottom: 0;
     }
     .big_logo {
         display: none;
@@ -765,6 +776,9 @@ img {
         display: none;
     }
     .playlist {
+        height: calc(100vh - (var(--footer-height-1) + 280px));
+    }
+    .playlist * {
         display: none;
     }
     .separator_line {
@@ -790,62 +804,6 @@ img {
 
 @media screen and (max-width: 320px) {
 
-    /* #site_navigation_sidebar {
-        width: var(--sidebar-width-3);
-
-        position: relative;
-    }
-    .site_logo,
-    .bottom_content {
-        padding: 0;
-    }
-
-    .site_logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .bottom_content {
-        align-items: center;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-    .big_logo {
-        display: none;
-    }
-    .small_logo {
-        display: block;
-    }
-    .chosen_bar {
-        margin-right: 0;
-    }
-    .bar_mobile {
-        display: block;
-    }
-    .nav_item>a {
-        justify-content: center;
-    }
-    .logo_caption {
-        display: none;
-    }
-    .playlist {
-        display: none;
-    }
-    .separator_line {
-        display: none;
-    }
-
-
-    #site_header {
-        width: calc(100% - var(--sidebar-width-3));
-        transition: all 0.5s;
-    }
-    #site_main {
-        width: calc(100% - var(--sidebar-width-3));
-        
-    } */
-
     .card {
         width: 100%;
     }
@@ -858,5 +816,14 @@ img {
     }
     .footer_right {
         display: none;
+    }
+}
+
+
+/* Imposto una larghezza massima del main_wrapper per quando si estende la pagina più del dovuto */
+
+@media screen and (min-width: 1440px) {
+    .main_wrapper {
+        max-width: 1920px;
     }
 }
